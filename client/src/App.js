@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import MovieList from './components/MovieList';
+import MovieList from './components/MovieList/MovieList';
+import Header from './components/Header/Header';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <h1> Movie rating webiste</h1>
-      <MovieList />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<MovieList />
+		</div>
+	);
 }
-
 export default App;

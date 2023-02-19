@@ -1,5 +1,5 @@
-import React from 'react';
-import Movie from './Movie';
+var express = require('express');
+var router = express.Router();
 const harryPotterFirst = {
     title: "Harry Potter and the Sorcers stone",
     image: "https://m.media-amazon.com/images/I/51HSkTKlauL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
@@ -30,17 +30,10 @@ const movies = [
     ironman,
     spiderman
 ];
-const showMore = (movie) => {
-    return (
-        <Movie movie={movie} />
-    );
-}
-const MovieList = () => {
-    return (
-        <div>
-            {movies.map(showMore)}
-        </div>
-    );
-}
 
-export default MovieList;
+/* GET users listing. */
+router.get('/', function (req, res, next) {
+    res.send(movies);
+});
+
+module.exports = router;
