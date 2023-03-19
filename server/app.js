@@ -8,8 +8,11 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/movies');
+const db = require('./db/db');
 
 var app = express();
+
+db.connectDb();
 
 // CORS - Security issues of cors site origin
 app.use(cors());
