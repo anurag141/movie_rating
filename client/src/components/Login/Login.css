@@ -1,0 +1,141 @@
+.box {
+    display: inline-block;
+    position: relative;
+    width: 380px;
+    height: 420px;
+    border-radius: 8px;
+    /* border: 1px solid #EDEDED; */
+    background: transparent;
+    background-color: rgb(10 10 10 / 24%);
+    backdrop-filter: blur(23px);
+    overflow: hidden;
+    margin-top: 10vh;
+}
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: transparent;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+.form h2 {
+    color: #EDEDED;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0,1em;
+    padding: 0;
+    margin: 0;
+
+}
+
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 9px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #444444;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px 10px 10px;
+    font-size: 1em;
+    color: #EDEDED;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span, 
+.inputBox input:focus ~ span  {
+    color: inherit;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 9px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #444444;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #EDEDED;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i, 
+.inputBox input:focus ~ i {
+    height: 44px;
+
+}
+
+.links {
+    margin-top: 10px;
+    display: flex;
+}
+
+
+.links a {
+    margin: 40px 0;
+    font-size: 1em;
+    color: #EDEDED;
+    text-decoration: none;
+}
+
+.links a:hover{
+    transition: 0.2s;
+    color: #00fbff;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #EDEDED;
+    padding: 11px 25px;
+    width: fit-content;
+    border-radius: 4px;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+    margin : 10px;
+}
+
+
+button:active {
+    opacity: 0.8;
+}
